@@ -17,16 +17,6 @@ button {
 	justify-content: center;
 }
 
-.arrow {
-	width: 19px;
-	transition: transform 1s;
-	padding-left: 10px;
-}
-
-.arrow.active {
-	transform: rotate(90deg);
-}
-
 header {
 	width: 100%;
 	display: flex;
@@ -105,7 +95,7 @@ header {
 }
 
 .main-header {
-	background-image: url(../img/prewiew.jpg);
+	background-image: url(img/prewiew.jpg);
 	display: flex;
 	justify-content: center;
 	align-items: center;
