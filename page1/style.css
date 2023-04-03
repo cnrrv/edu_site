@@ -23,10 +23,10 @@ header {
 	justify-content: center;
 	position: fixed;
 	background-color: #56c4a3;
-	box-shadow: 0px 3px 16px #cecece;
+	box-shadow: 0px 3px 16px #262626;
 }
 .nav {
-	height: 59px;
+	height: 64px;
 	width: 80%;
 	overflow: hidden;
 	display: flex;
@@ -35,7 +35,8 @@ header {
 
 .nav a {
   float: left;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 500;
   color: black;
   text-align: center;
   padding: 20px 16px;
@@ -48,14 +49,15 @@ header {
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: black;
-  padding: 20px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+    font-size: 20px;
+	font-weight: 500;
+	border: none;
+	outline: none;
+	color: black;
+	padding: 20px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
 }
 
 .dropbtn:hover {
@@ -69,7 +71,7 @@ header {
 	min-width: 100px;
 	max-width: 250px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
+	z-index: 200;
 }
 
 .drop-content a {
@@ -118,7 +120,7 @@ h1 {
 }
 
 .main-content {
-	padding: 40px 0;
+	padding: 20px 0;
 }
 
 .galery {
@@ -179,10 +181,11 @@ h1 {
 }
 
 .tab {
-  position: relative;
-  margin-bottom: 1px;
-  width: 100%;
-  overflow: hidden;
+	position: relative;
+	margin-bottom: 1px;
+	width: 100%;
+	overflow: hidden;
+	z-index: -1;
 }
 .tab input {
   position: absolute;
@@ -205,7 +208,7 @@ h1 {
   max-height: 0;
   font-size: 17px;
   overflow: hidden;
-  background: #6bedc6;
+  background: #9df5da;
   -webkit-transition: max-height .35s;
   -o-transition: max-height .35s;
   transition: max-height .35s;
@@ -271,12 +274,14 @@ h1 {
 }
 
 .buttons {
-	padding-top: 10px;
+	padding-top: 20px;
 	display: flex;
 	justify-content: space-between;
 }
 
 .gobtn {
+	border-radius: 10px;
+	font-weight: 500;
 	background-color: #56c4a3;
 	border: none;
 	font-size: 16px;
