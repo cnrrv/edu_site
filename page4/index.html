@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Адресация памяти</title>
+	<title>Методы адресации. Неявная адресация в языке С</title>
 	<link rel="stylesheet" href="style.css">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.min.css">
@@ -13,77 +13,161 @@
 	<header>
 	<div class='container'>
 		<div class='nav'>
-			<div class='nav-header'><a href='#'>Адресация памяти</a></div>
+			<div class='nav-header'><a href='#up'>Методы адресации</a></div>
 			<div class='dropdown'>
 				<button class='dropbtn'>Меню</button>
 				<div class='drop-content'>
-					<a href='#'>Введение</a>
-					<a href='#'>Понятие адресации памяти компьютера</a>
-					<a href='#'>Классификация методов адресации</a>
-					<a href='#'>Явная адресация в языке ассемблера</a>
-					<a href='#'>Неявная адресация в языке С</a>
-					<a href='#'>Выводы</a>
-					<a href='#'>Литература</a>
+					<a target='_blank' href='https://resilient-paprenjak-d9fb01.netlify.app/'>Введение</a>
+					<a target='_blank' href='https://jovial-croquembouche-13fb4b.netlify.app/'>Понятие адресации памяти компьютера</a>
+					<a target='_blank' href='https://comfy-dieffenbachia-12f03e.netlify.app/'>Классификация методов адресации</a>
+					<a target='_blank' href='#'>Явная адресация в языке ассемблера</a>
+					<a target='_blank' href='#'>Неявная адресация в языке С</a>
+					<a target='_blank' href='#'>Выводы</a>
+					<a target='_blank' href='#'>Литература</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	</header>
-	<div class='nav'></div>
+	<div id='up' class='nav'></div>
 	<div class='main-header img'>
-		<h1>Введение</h1>
+		<h1>Неявная адресация в языке С</h1>
 	</div>
 	<div class='container'>
 		<div class='main-content'>
 			<div class='quote'>
-				<p>В настоящее время сложно представить человека или сферу жизни
-				общества, не задумываясь о технологиях, с которыми мы взаимодействуем
-				каждый день.</p>
+				<p><i>Язык программирования С</i>, как и ассемблер, относится к низкоуровневым
+				языка программирования и предоставляет ряд методов для управления
+				памятью. Благодаря этому у разработчика есть возможность контролировать
+				количество потребляемой памяти на различные процессы, не выходя за
+				пределы резервов памяти компьютера.</p>
 			</div>
-			<div class='galery'>
-				<p>Это могут быть:</p>
-				<div class='cards'>
-					<div class='card  col-md-3 col-xs-3'>
-						<img class='card-img' src='img/laptop1.jpeg'>
-						<p class='card-header'>Личные устройства</p>
-					</div>
-					<div class='card col-md-3 col-xs-3'>
-						<img class='card-img' src='img/print1.jpeg'>
-						<p class='card-header'>3D - печать</p>
-					</div>
-					<div class='card col-md-3 col-xs-3'>
-						<img class='card-img' src='img/biometry.jpeg'>
-						<p class='card-header'>Биометрия</p>
-					</div>
-					<div class='card col-md-3 col-xs-3'>
-						<img class='card-img' src='img/robot1.jpeg'>
-						<p class='card-header'>Роботизированные системы</p>
+			<hr class='line'></hr>
+			<div class='develop'>
+				<p class='text-header'>Неявная адресация</p>
+			</div>
+			<hr class='line'></hr>
+			<div class='develop'>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;В традиционных языках программирования
+				cуществуют три вида памяти: статический, стековый и динамический.
+				При работе с ними используется неявная адресация. Для статической
+				и динамической памяти используется <i>непосредственный</i> метод
+				адресации, а для стековой памяти - <i>стековый</i> метод.</p>
+			</div>
+			<div class='right-develop'>
+				<p class='mint-header'>Непосредственная адресация</p>
+			</div>
+			<div class='develop'>
+				<p><i>Статическая память</i> выделяется на стадии компиляции и сборки.
+				Переменные, определенные в программе статическим методом, имеют
+				фиксированный адрес, известный до запуска программы и не изменяются
+				в процессе её работы. К статическим переменным относятся
+				глобальные переменные и статические переменные</p>
+			</div>
+			<div class='tab'>
+				<input id="tab-one" type="checkbox" name="tabs">
+				<label for="tab-one">Пример</label>
+				<div class='tab-content'>
+					<p class='tab-text'>функция <i>summ</i>, которая подсчитывает сумму статической
+					переменной <i>x</i> и глобальной переменной <i>y</i></p>
+					<div class='right-develop pad-down'>
+						<div class='code'>
+							<p class='tab-code'><i>static int x = 10;</i></p>
+							<p class='tab-code'><i>int y = 20;</i></p>
+							<p class='tab-code'><i>int summ() {</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;return x + y;</i></p>
+							<p class='tab-code'><i>}; </i></p>
+						</div>
+						<div class='comm'>
+							<p>//определяем статическую переменную x</p>
+							<p>//определяем переменную y</p>
+							<p>//определяем функцию summ</p>
+							<p>//возвращаем значение суммы переменных x и y</p>
+							<p>//очищение памяти после выполнения программы</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<hr class='line'></hr>
 			<div class='develop'>
-				<video class='col-md-6 col-xs-6'><source src=''></video>
-				<p class='col-sm-6'>Все эти устройства имеют сложную внутреннюю и внешнюю структуру, знание
-				которой не требуется человеку для их использования. Тем не менее, понимание
-				основ архитектуры электро-вычислительных машин важно в сфере программирования
-				и разработки программного обеспечения и приложений.</p>
-				</p>
+				<p>Концепция <i>динамического выделения памяти</i> в языке С позволяет выделять
+				память во время выполнения программы. Такой метод применяется в случаях,
+				когда заранее неизвестно количество данных, которое будет использоваться
+				в программе. При работе с динамической памятью используют указатели -
+				переменные, которые хранят в себе адрес памяти объекта. </p>
+			</div>
+			<div class='tab'>
+				<input id="tab-two" type="checkbox" name="tabs">
+				<label for="tab-two">Пример</label>
+				<div class='tab-content'>
+					<p class='tab-text'>функция присвоения адреса переменной</p>
+					<div class='right-develop pad-down'>
+						<div class='code'>
+							<p class='tab-code'><i>int* func() {</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;int x = 0;</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;int *p;</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;return p;</i></p>
+							<p class='tab-code'><i>}; </i></p>
+						</div>
+						<div class='comm'>
+							<p>//определяем функцию func</p>
+							<p>//определяем переменную x</p>
+							<p>//определяем указатель p</p>
+							<p>//возвращаем адрес указателя</p>
+							<p>//очищение памяти после выполнения программы</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='right-develop pad-up'>
+				<p class='mint-header'>Стековая адресация</p>
 			</div>
 			<div class='develop'>
-			<p class='col-sm-7'>Для того, чтобы разрабатывать импортонезавимое программное обеспечение
-			и приложения, нужны квалифицированные специалисты. Такие специалисты
-			должны знать один или несколько языков программирования. Это могут быть
-			Python, С, C#, C++, Java, Assembler.</p>
-			<img class='img-lang col-sm-5' src='img/lang.jpg'>
+				<p>Переменная, создаваемая внутри функции, называется локальной и
+				определяется с помощью <i>стековой памяти</i>. Стек - это структура данных,
+				представляющая собой список элементов, организованный по принципу
+				«последним пришел - первым вышел». Структуру стека можно сравнить
+				со стопкой книг. Когда внутри функции инициализируется переменная,
+				она кладётся на вершину стека. Затем, когда функция завершает
+				работу, все переменные, связанные с этой функцией, удаляются,
+				а стек очищается.</p>
+			</div>
+			<div class='tab'>
+				<input id="tab-three" type="checkbox" name="tabs">
+				<label for="tab-three">Пример</label>
+				<div class='tab-content'>
+					<p class='tab-text'>функция <i>summ</i>, которая подсчитывает сумму
+					локальных переменных <i>x</i> и <i>y</i></p>
+					<div class='right-develop pad-down'>
+						<div class='code'>
+							<p class='tab-code'><i>int summ() {</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;int x = 10;</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;int y = 20;</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;return x + y;</i></p>
+							<p class='tab-code'><i>};</i></p>
+						</div>
+						<div class='comm'>
+							<p>//определяем функцию func</p>
+							<p>//определяем переменную x</p>
+							<p>//определяем указатель p</p>
+							<p>//возвращаем адрес указателя</p>
+							<p>//очищение памяти после выполнения программы</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class='develop'>
+			<video class='col-md-6 col-xs-6'><source src=''></video>
 			</div>
 			<hr class='line'></hr>
 			<div class='quote'>
-				<p>Многие из этих языков имеют возможность
-				использовать адресацию памяти при написании программ. Поэтому начинающим
-				разработчикам необходимо хорошо разбираться в том, как работает адресация памяти.</p>
+				<p>Косвенная адресация позволяет задействовать в программе больший объем памяти
+				по сравнению с прямой адресаций, но требует дополнительных вычислений для
+				нахождения эффективного адреса и более частое обращение к памяти.
+				</p>
 			</div>
 			<div class='buttons'>
+				<button class='gobtn'><a href='https://comfy-dieffenbachia-12f03e.netlify.app/'>Назад</a></button>
 				<button class='gobtn'><a href='#'>Вперед</a></button>
 			</div>
 		</div>
