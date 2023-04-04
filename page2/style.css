@@ -241,3 +241,9 @@ button.gobtn a {
 	line-height: 15px;
 	color: #FFFFFF;
 }
+
+@media screen and (min-width: 1200px) {
+	.main-content {
+		width: 80%;
+	}
+}

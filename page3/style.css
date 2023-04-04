@@ -12,11 +12,6 @@
 	align-items: center;
 }
 
-button {
-	display: flex;
-	justify-content: center;
-}
-
 header {
 	width: 100%;
 	display: flex;
@@ -162,11 +157,6 @@ h1 {
 	justify-content: center;
 }
 
-.card-text {
-	padding: 10px;
-	font-size: 20px;
-}
-
 .img-lang {
 	padding-left: 10px;
 }
@@ -204,108 +194,81 @@ h1 {
 	font-size: 30px;
 }
 
-.tab-block {
+/*-------ACCORDION--------*/
+
+.acc-develop {
 	font-size: 20px;
-	padding: 20px 0;
 }
 
-.tab-text i {
-	font-weight: 500;
-}
-
-.tab-head {
-	padding-bottom: 20px;
-	text-align: justify;
-}
-
-.tab {
-	position: relative;
-	margin-bottom: 1px;
-	width: 100%;
-	border-radius: 15px;
-	overflow: hidden;
-	z-index: -1;
-}
-.tab input {
-	position: absolute;
-	opacity: 0;
-	z-index: -1;
-}
-.tab label {
-  position: relative;
-  display: block;
-  padding: 0 0 0 1em;
-  background: #56c4a3;
+.accordion {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #56c4a3;
+  color: #black;
   font-weight: 500;
-  line-height: 3;
+  font-size: 20px;
   cursor: pointer;
-}
-.blue label {
-  background: #2980b9;
-}
-.tab-content {
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-	max-height: 0;
-	font-size: 17px;
-	overflow: hidden;
-	background: #9df5da;
-	-webkit-transition: max-height .35s;
-	-o-transition: max-height .35s;
-	transition: max-height .35s;
-}
-.blue .tab-content {
-  background: #3498db;
-}
-.tab-text {
-  text-align: justify;
-  padding: 1em;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
 }
 
-.tab-code {
-	text-align: justify;
-	padding: 0 1em;
+.accordion:hover {
+    background-color: #9df5da;
+	
+}
+
+.active {
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	background-color: #56c4a3;
+}
+
+.panel {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 2px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9df5da;
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+}
+
+.accordion:after {
+  transition: border-radius 0.5s ease-in;
+  content: '+';
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+	content: '-';
+}
+
+/*--------------*/
+
+.card-text i {
 	font-weight: 500;
 }
 
-.tab-img-text {
-	text-align: justify;
-	padding: 1em 1em 0 1em;
+.card-code {
+	font-weight: 500;
+	padding: 10px 0;
 }
 
-.tab input:checked ~ .tab-content {
-  max-height: 100vh;
-}
-
-.tab label::after {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  width: 3em;
-  height: 3em;
-  line-height: 3;
-  text-align: center;
-  -webkit-transition: all .35s;
-  -o-transition: all .35s;
-  transition: all .35s;
-}
-.tab input[type=checkbox] + label::after {
-  content: "+";
-}
-.tab input[type=radio] + label::after {
-  content: "\25BC";
-}
-.tab input[type=checkbox]:checked + label::after {
-  transform: rotate(315deg);
-}
-.tab input[type=radio]:checked + label::after {
-  transform: rotateX(180deg);
-}
-
-.tab-card {
-	display: flex;
-	align-items: center;
+.card-code-1 {
+	font-weight: 500;
+	padding-bottom: 10px;
 }
 
 .buttons {
@@ -342,4 +305,10 @@ button.gobtn a {
 	font-weight: 400;
 	line-height: 15px;
 	color: #FFFFFF;
+}
+
+@media screen and (min-width: 1200px) {
+	.main-content {
+		width: 80%;
+	}
 }

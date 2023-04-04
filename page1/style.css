@@ -6,15 +6,66 @@
 	box-sizing: border-box;
 }
 
+/*-------ACCORDION--------*/
+
+.acc-develop {
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+
+.accordion {
+  background-color: #56c4a3;
+  color: #black;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+    background-color: #9df5da;
+}
+
+.active {
+	background-color: #56c4a3;
+}
+
+.panel {
+  margin-bottom: 2px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9df5da;
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+}
+
+.accordion:after {
+  content: '+';
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+	content: '-';
+}
+
+/*--------------*/
+
 .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-button {
-	display: flex;
-	justify-content: center;
 }
 
 header {
@@ -71,7 +122,7 @@ header {
 	min-width: 100px;
 	max-width: 250px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 200;
+	z-index: 0;
 }
 
 .drop-content a {
@@ -130,8 +181,8 @@ h1 {
 
 .cards {
 	display: flex;
-	flex-wrap: wrap;
-	margin: 15px 0;
+	justify-content: center;
+	align-items: center;
 }
 
 .card {
@@ -140,7 +191,6 @@ h1 {
 
 .card-img {
 	width: 100%;
-	margin-bottom: 5px;
 }
 
 .card-header {
@@ -170,108 +220,11 @@ h1 {
 	margin-left: auto;
 }
 
-.tab-block {
-	font-size: 20px;
-	padding: 20px 0;
-}
-
-.tab-head {
-	padding-bottom: 20px;
-	text-align: justify;
-}
-
-.tab {
-	position: relative;
-	margin-bottom: 1px;
-	width: 100%;
-	overflow: hidden;
-	z-index: -1;
-}
-.tab input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-.tab label {
-  position: relative;
-  display: block;
-  padding: 0 0 0 1em;
-  background: #56c4a3;
-  font-weight: 500;
-  line-height: 3;
-  cursor: pointer;
-}
-.blue label {
-  background: #2980b9;
-}
-.tab-content {
-  max-height: 0;
-  font-size: 17px;
-  overflow: hidden;
-  background: #9df5da;
-  -webkit-transition: max-height .35s;
-  -o-transition: max-height .35s;
-  transition: max-height .35s;
-}
-.blue .tab-content {
-  background: #3498db;
-}
-.tab-text {
-  text-align: justify;
-  padding: 1em;
-}
-
-.tab-img-text {
-	text-align: justify;
-	padding: 1em 1em 0 1em;
-}
-
-.tab input:checked ~ .tab-content {
-  max-height: 100vh;
-}
-
-.tab label::after {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  width: 3em;
-  height: 3em;
-  line-height: 3;
-  text-align: center;
-  -webkit-transition: all .35s;
-  -o-transition: all .35s;
-  transition: all .35s;
-}
-.tab input[type=checkbox] + label::after {
-  content: "+";
-}
-.tab input[type=radio] + label::after {
-  content: "\25BC";
-}
-.tab input[type=checkbox]:checked + label::after {
-  transform: rotate(315deg);
-}
-.tab input[type=radio]:checked + label::after {
-  transform: rotateX(180deg);
-}
-
-.tab-card {
-	display: flex;
-	align-items: center;
-}
-
-.tab-img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-}
-
 .img-center {
 	display: flex;
 	justify-content: center;
-	padding-bottom: 1em;
 }
+
 
 .buttons {
 	padding-top: 20px;
@@ -306,4 +259,10 @@ button.gobtn a {
 	font-weight: 400;
 	line-height: 15px;
 	color: #FFFFFF;
+}
+
+@media screen and (min-width: 1200px) {
+	.main-content {
+		width: 80%;
+	}
 }

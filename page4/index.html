@@ -64,23 +64,23 @@
 				в процессе её работы. К статическим переменным относятся
 				глобальные переменные и статические переменные</p>
 			</div>
-			<div class='tab'>
-				<input id="tab-one" type="checkbox" name="tabs">
-				<label for="tab-one">Пример</label>
-				<div class='tab-content'>
-					<p class='tab-text'>функция <i>summ</i>, которая подсчитывает сумму статической
+			<script src='script.js'></script>
+			<div class='acc-develop'>
+				<button class='accordion'>Пример</button>
+				<div class='panel'>
+					<p class='card-text'>функция <i>summ</i>, которая подсчитывает сумму статической
 					переменной <i>x</i> и глобальной переменной <i>y</i></p>
-					<div class='right-develop pad-down'>
-						<div class='code'>
-							<p class='tab-code'><i>static int x = 10;</i></p>
-							<p class='tab-code'><i>int y = 20;</i></p>
-							<p class='tab-code'><i>int summ() {</i></p>
-							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;return x + y;</i></p>
-							<p class='tab-code'><i>}; </i></p>
+					<div class='cards'>
+						<div class='card col-md-3 col-xs-3'>
+						<p class='tab-code'><i>static int x = 10;</i></p>
+						<p class='tab-code'><i>int y = 20;</i></p>
+						<p class='tab-code'><i>int summ() {</i></p>
+						<p class='tab-code'><i>&nbsp;&nbsp;return x + y;</i></p>
+						<p class='tab-code'><i>}; </i></p>
 						</div>
-						<div class='comm'>
+						<div class='card'>
 							<p>//определяем статическую переменную x</p>
-							<p>//определяем переменную y</p>
+							<p>//определяем глобальную переменную y</p>
 							<p>//определяем функцию summ</p>
 							<p>//возвращаем значение суммы переменных x и y</p>
 							<p>//очищение памяти после выполнения программы</p>
@@ -95,20 +95,19 @@
 				в программе. При работе с динамической памятью используют указатели -
 				переменные, которые хранят в себе адрес памяти объекта. </p>
 			</div>
-			<div class='tab'>
-				<input id="tab-two" type="checkbox" name="tabs">
-				<label for="tab-two">Пример</label>
-				<div class='tab-content'>
-					<p class='tab-text'>функция присвоения адреса переменной</p>
-					<div class='right-develop pad-down'>
-						<div class='code'>
+			<div class='acc-develop'>
+				<button class='accordion'>Пример</button>
+				<div class='panel'>
+					<p class='card-text'>функция присвоения адреса переменной</p>
+					<div class='cards'>
+						<div class='card col-md-3 col-xs-3'>
 							<p class='tab-code'><i>int* func() {</i></p>
-							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;int x = 0;</i></p>
-							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;int *p;</i></p>
-							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;return p;</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;int x = 0;</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;int *p;</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;return p;</i></p>
 							<p class='tab-code'><i>}; </i></p>
 						</div>
-						<div class='comm'>
+						<div class='card'>
 							<p>//определяем функцию func</p>
 							<p>//определяем переменную x</p>
 							<p>//определяем указатель p</p>
@@ -117,7 +116,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>			
 			<div class='right-develop pad-up'>
 				<p class='mint-header'>Стековая адресация</p>
 			</div>
@@ -131,21 +130,20 @@
 				работу, все переменные, связанные с этой функцией, удаляются,
 				а стек очищается.</p>
 			</div>
-			<div class='tab'>
-				<input id="tab-three" type="checkbox" name="tabs">
-				<label for="tab-three">Пример</label>
-				<div class='tab-content'>
-					<p class='tab-text'>функция <i>summ</i>, которая подсчитывает сумму
+			<div class='acc-develop'>
+				<button class='accordion'>Пример</button>
+				<div class='panel'>
+					<p class='card-text'>функция <i>summ</i>, которая подсчитывает сумму
 					локальных переменных <i>x</i> и <i>y</i></p>
-					<div class='right-develop pad-down'>
-						<div class='code'>
+					<div class='cards'>
+						<div class='card col-md-3 col-xs-3'>
 							<p class='tab-code'><i>int summ() {</i></p>
-							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;int x = 10;</i></p>
-							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;int y = 20;</i></p>
-							<p class='tab-code'><i>&nbsp;&nbsp;&nbsp;&nbsp;return x + y;</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;int x = 10;</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;int y = 20;</i></p>
+							<p class='tab-code'><i>&nbsp;&nbsp;return x + y;</i></p>
 							<p class='tab-code'><i>};</i></p>
 						</div>
-						<div class='comm'>
+						<div class='card'>
 							<p>//определяем функцию func</p>
 							<p>//определяем переменную x</p>
 							<p>//определяем указатель p</p>
@@ -154,7 +152,6 @@
 						</div>
 					</div>
 				</div>
-				
 			</div>
 			<div class='develop'>
 			<video class='col-md-6 col-xs-6'><source src=''></video>
