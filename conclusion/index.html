@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Адресация памяти</title>
+	<title>Методы адресации. Выводы</title>
 	<link rel="stylesheet" href="style.css">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.min.css">
@@ -13,15 +13,15 @@
 	<header>
 	<div class='container'>
 		<div class='nav'>
-			<div class='nav-header'><a href='#'>Адресация памяти</a></div>
+			<div class='nav-header'><a href='#up'>Методы адресации</a></div>
 			<div class='dropdown'>
 				<button class='dropbtn'>Меню</button>
 				<div class='drop-content'>
-					<a href='#'>Введение</a>
-					<a href='#'>Понятие адресации памяти компьютера</a>
-					<a href='#'>Классификация методов адресации</a>
-					<a href='#'>Явная адресация в языке ассемблера</a>
-					<a href='#'>Неявная адресация в языке С</a>
+					<a href='https://resilient-paprenjak-d9fb01.netlify.app/'>Введение</a>
+					<a href='https://jovial-croquembouche-13fb4b.netlify.app/'>Понятие адресации памяти компьютера</a>
+					<a href='https://comfy-dieffenbachia-12f03e.netlify.app/'>Классификация методов адресации</a>
+					<a href='https://lucent-melba-515539.netlify.app/'>Явная адресация в языке ассемблера</a>
+					<a href='https://jocular-jalebi-aa84c3.netlify.app/'>Неявная адресация в языке С</a>
 					<a href='#'>Выводы</a>
 					<a href='#'>Литература</a>
 				</div>
@@ -29,61 +29,65 @@
 		</div>
 	</div>
 	</header>
-	<div class='nav'></div>
+	<div id='up' class='nav'></div>
 	<div class='main-header img'>
-		<h1>Введение</h1>
+		<h1>Выводы</h1>
 	</div>
 	<div class='container'>
 		<div class='main-content'>
-			<div class='quote'>
-				<p>В настоящее время сложно представить человека или сферу жизни
-				общества, не задумываясь о технологиях, с которыми мы взаимодействуем
-				каждый день.</p>
-			</div>
-			<div class='galery'>
-				<p>Это могут быть:</p>
-				<div class='cards'>
-					<div class='card  col-md-3 col-xs-3'>
-						<img class='card-img' src='img/laptop1.jpeg'>
-						<p class='card-header'>Личные устройства</p>
-					</div>
-					<div class='card col-md-3 col-xs-3'>
-						<img class='card-img' src='img/print1.jpeg'>
-						<p class='card-header'>3D - печать</p>
-					</div>
-					<div class='card col-md-3 col-xs-3'>
-						<img class='card-img' src='img/biometry.jpeg'>
-						<p class='card-header'>Биометрия</p>
-					</div>
-					<div class='card col-md-3 col-xs-3'>
-						<img class='card-img' src='img/robot1.jpeg'>
-						<p class='card-header'>Роботизированные системы</p>
-					</div>
+
+			<div class='develop'>
+				<p class='col-xs-8 col-md-8'>&nbsp;&nbsp;&nbsp;&nbsp;Память компьютера представляет из себя набор
+				ячеек, каждая из которых идентифицируется в системе с
+				помощью адреса - <i>числового идентификатора</i>, благодаря
+				которому компьютер может обращаться к данным,
+				размещенным в ячейках памяти. </p>
+				<div class='col-xs-4 col-md-4'>
+				<img class='card-img' src='img/cells.jpeg'>
 				</div>
 			</div>
 			<hr class='line'></hr>
 			<div class='develop'>
-				<video class='col-md-6 col-xs-6'><source src=''></video>
-				<p class='col-sm-6'>Все эти устройства имеют сложную внутреннюю и внешнюю структуру, знание
-				которой не требуется человеку для их использования. Тем не менее, понимание
-				основ архитектуры электро-вычислительных машин важно в сфере программирования
-				и разработки программного обеспечения и приложений.</p>
-				</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Методы адресации принято классифицировать на
+				два больших класса: явную и неявную адресацию. </p>
 			</div>
-			<div class='develop'>
-			<p class='col-sm-7'>Для того, чтобы разрабатывать импортонезавимое программное обеспечение
-			и приложения, нужны квалифицированные специалисты. Такие специалисты
-			должны знать один или несколько языков программирования. Это могут быть
-			Python, С, C#, C++, Java, Assembler.</p>
-			<img class='img-lang col-sm-5' src='img/lang.jpg'>
+			<div class='cards'>
+				<div class='card'>
+					<p class='card-text'>При использовании <i>метода явной адресации</i> в
+					инструкции указывается адрес или адресный код операнда. </p>
+				</div>
+				<div class='card'>
+					<p class='card-text'>В <i>методе неявной адресации</i> не указывается
+					адрес операнда - в инструкциях используется переменные или указатели.</p>
+					
+				</div>
+			</div>
+			<div class='cards'>
+				<div class='dark-card'>
+					<p class='card-text'>В языке ассемблера при реализации программы есть
+					возможность использовать удобный метод адресации. При использовании
+					явной адресации в инструкции можно обращаться к ячейке памяти по её
+					адресу при <i>прямом</i> методе адресации или с помощью смещения
+					при <i>косвенном</i> методе адресации.</p>
+				</div>
+				<div class='dark-card'>
+					<p class='card-text'>В языке программирования С при работе с памятью
+					используется метод неявной адресации памяти. Во время работы со статической и
+					динамической памятью применяется <i>непосредственный</i> метод адресации. При работе
+					со стеком и его обработкой используется <i>стековый</i> метод адресации.</p>
+				</div>
 			</div>
 			<hr class='line'></hr>
 			<div class='quote'>
-				<p>Многие из этих языков имеют возможность
-				использовать адресацию памяти при написании программ. Поэтому начинающим
-				разработчикам необходимо хорошо разбираться в том, как работает адресация памяти.</p>
+				<p>Для разработки импортонезависимого программного обеспечения и приложений
+				требуются глубокие знания в архитектуре ЭВМ. Методы адресации памяти являются
+				ее неотьемлемой частью, их знание и применение позволит разработчикам
+				реализовывать качественные, быстродействующие и защищенные продукты.
+				</p>
 			</div>
+			<hr class='line'></hr>
 			<div class='buttons'>
+				<button class='gobtn'><a href='https://jocular-jalebi-aa84c3.netlify.app/'>Назад</a></button>
 				<button class='gobtn'><a href='#'>Вперед</a></button>
 			</div>
 		</div>
@@ -94,3 +98,4 @@
 	</footer>
 </body>
 </html>
+ 
