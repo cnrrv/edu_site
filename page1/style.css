@@ -211,6 +211,15 @@ h1 {
 	padding: 20px 0;
 }
 
+.develop-top {
+	font-size: 20px;
+	text-align: justify;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20px;
+}
+
 .quote {
 	text-align: center;
 	font-size: 20px;
